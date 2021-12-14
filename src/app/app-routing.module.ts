@@ -13,6 +13,8 @@ const routes: Routes = [
     loadChildren: () => import('./modules/gestion-produit/gestion-produit.module')
       .then(mod => mod.GestionProduitModule)
   },
+  { path: "rayons", loadChildren: () => import('./modules/GestionRayons/rayon.module').then(m => m.RayonModule) },
+  { path: "stocks", loadChildren: () => import('./modules/GestionStocks/stock.module').then(m => m.StockModule) },
   {
     path: 'not-found',
     loadChildren: () => import('./modules/not-found/not-found.module')
