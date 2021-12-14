@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ClientService } from '../../../Services/client.service';
-import { Client } from '../../../models/client';
+import { Client } from 'src/app/Models/client';
+import { ClientService } from 'src/app/Services/client.service';
+
 
 @Component({
   selector: 'app-update-client',

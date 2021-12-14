@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ClientService } from '../../../Services/client.service';
-import { HttpService } from '../../../Services/http.service';
-import { Client } from '../../../models/client';
+import { Client } from 'src/app/Models/client';
+import { ClientService } from 'src/app/Services/client.service';
+import { HttpService } from 'src/app/Services/http.service';
+
 
 @Component({
   selector: 'app-add-client',

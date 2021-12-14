@@ -12,6 +12,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NotFoundModule } from './modules/not-found/not-found.module';
 import { RayonModule } from './modules/GestionRayons/rayon.module';
 import { StockModule } from './modules/GestionStocks/stock.module';
+import { GestionClientModule } from './modules/gestion-client/gestion-client.module';
+import { GestionUserModule } from './modules/gestion-user/gestion-user.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { StockModule } from './modules/GestionStocks/stock.module';
     NgbModule,
     RayonModule,
     StockModule,
-    NotFoundModule
+    NotFoundModule,
+    GestionClientModule,
+    GestionUserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

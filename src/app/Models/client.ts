@@ -1,12 +1,12 @@
 export class Client {
-    idClient : number ;
-    nom : String ;
-    prenom : String ;
-    email : String ;
-    password : String ;
-    picture: String ;
-    dateNaissance : Date;
-    profession : String ;
-    categorieClient : String ;
-    
-}
+    idClient : number;
+    nom:string;
+    prenom:string;
+    email:string;
+    telephone: number;
+    password:string;
+    dateNaissance:Date;
+    categorieClient:String;
+    profession:string;
+    picture:string;
+    }

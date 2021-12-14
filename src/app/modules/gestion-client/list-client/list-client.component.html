@@ -62,7 +62,7 @@
             <span >{{c.profession}}</span>
           </td>
           <td class="table-actions" >
-            <a  class="table-action" [routerLink]="['/updateclient',c.idClient]" data-toggle="tooltip" data-original-title="Edit product">
+            <a  class="table-action" [routerLink]="['/client/updateclient',c.idClient]" data-toggle="tooltip" data-original-title="Edit product">
               <i class="fas fa-user-edit"></i>
             </a>
             <a href= "http://localhost:4200/listclient" class="table-action table-action-delete" (click)="deleteClient(c)" data-toggle="tooltip" data-original-title="Delete product">

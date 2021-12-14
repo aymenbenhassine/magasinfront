@@ -65,6 +65,37 @@
               </div>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#navbar-client" data-toggle="collapse" role="button"
+                aria-expanded="false" aria-controls="navbar-client">
+                <i class="ni ni-archive-2 text-green"></i>
+                <span class="nav-link-text">Gestion des Clients</span>
+              </a>
+              <div class="collapse" id="navbar-client">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a [routerLink]="['/client/listclient']" class="nav-link">Consulter les clients</a>
+                  </li>
+                  <li class="nav-item">
+                    <a [routerLink]="['/client/addclient']" class="nav-link">Ajouter un client</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-user" data-toggle="collapse" role="button"
+                aria-expanded="false" aria-controls="navbar-user" ><!--*ngIf="authService.is81Admin()"-->
+                <i class="ni ni-single-copy-04 text-pink"></i>
+                <span class="nav-link-text">Gestion des Users</span>
+              </a>
+              <div class="collapse" id="navbar-user">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a [routerLink]="['user/listuser']" class="nav-link">Consulter les users</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#navbar-rayon" data-toggle="collapse" role="button"
                 aria-expanded="false" aria-controls="navbar-rayon">
                 <i class="ni ni-tag text-primary"></i>

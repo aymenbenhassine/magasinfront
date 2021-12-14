@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailUserComponent } from 'src/app/modules/gestion-user/detail-user/detail-user.component';
-import { ListUserComponent } from 'src/app/modules/gestion-user/list-user/list-user.component';
+import { DetailUserComponent } from './detail-user/detail-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
 
 const routes: Routes = [
   {path:"listuser", component:ListUserComponent, children:[

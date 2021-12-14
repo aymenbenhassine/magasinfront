@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientService } from '../../../Services/client.service';
-import { Client } from '../../../models/client';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { Client } from 'src/app/Models/client';
+import { ClientService } from '../../../Services/client.service';
 
 @Component({
   selector: 'app-list-client',

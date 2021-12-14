@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ConnectionDetails } from '../models/ConnectionDetails';
-import { LoginDetails } from '../models/LoginDetails';
+import { ConnectionDetails } from '../Models/ConnectionDetails';
+import { LoginDetails } from '../Models/LoginDetails';
+
 import { GlobalService } from './global.service';
+
 
 @Injectable({
   providedIn: 'root'

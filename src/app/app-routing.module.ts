@@ -9,6 +9,16 @@ const routes: Routes = [
       .then(mod => mod.FactureModule)
   },
   {
+    path: 'client',
+    loadChildren: () => import('./modules/gestion-client/gestion-client.module')
+      .then(mod => mod.GestionClientModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./modules/gestion-user/gestion-user.module')
+      .then(mod => mod.GestionUserModule)
+  },
+  {
     path: 'produit',
     loadChildren: () => import('./modules/gestion-produit/gestion-produit.module')
       .then(mod => mod.GestionProduitModule)
