@@ -22,7 +22,7 @@ export class AddClientComponent implements OnInit {
     console.log(this.client);      //Afficher le user dans le console
     this.client.picture = "../../assets/img/theme/"+this.client.picture.substr(12);
       this.cs.addClient(this.client).subscribe (res => {  console.log('Product created!');
-    this.router.navigateByUrl('/listclient');
+    this.router.navigateByUrl('/client/listclient');
 
   });
   

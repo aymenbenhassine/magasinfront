@@ -14,11 +14,13 @@ import { RayonModule } from './modules/GestionRayons/rayon.module';
 import { StockModule } from './modules/GestionStocks/stock.module';
 import { GestionClientModule } from './modules/gestion-client/gestion-client.module';
 import { GestionUserModule } from './modules/gestion-user/gestion-user.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,8 @@ import { GestionUserModule } from './modules/gestion-user/gestion-user.module';
     NotFoundModule,
     GestionClientModule,
     GestionUserModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

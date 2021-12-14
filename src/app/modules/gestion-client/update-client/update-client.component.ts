@@ -23,7 +23,7 @@ export class UpdateClientComponent implements OnInit {
 
   updateClient(){
     this.cs.updateClient(this.client).subscribe(res => {  console.log('Product created!');
-    this.router.navigateByUrl('/listclient');
+    this.router.navigateByUrl('/client/listclient');
   });
 }
 }

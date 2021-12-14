@@ -40,7 +40,7 @@ myForm : FormGroup ;
     console.log(this.myForm.getRawValue());
     this.edited.emit(this.myForm.getRawValue());
     this.us.updateUser(this.userToEdit).subscribe(res => {  console.log('Product created!');
-    this.router.navigateByUrl('/listuser/detailuser');
+    this.router.navigateByUrl('/user/listuser');
   });
     this.myForm.reset();
   }
