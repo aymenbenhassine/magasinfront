@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
         //sessionStorage.setItem('username',this.username);
         this.invalidLogin= false;
         this.router.navigate(['user/listuser']);
+        
       },error=>{
         this.invalidLogin=true;  
         console.log(error);

@@ -4,7 +4,7 @@ import { ListRayonsComponent } from "./list-rayons/list-rayons.component";
 
 
 const routes: Routes = [
-    { path: "", component: ListRayonsComponent },
+    { path: "", component: ListRayonsComponent  },
 ]
 
 @NgModule({

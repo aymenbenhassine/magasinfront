@@ -17,7 +17,7 @@ export class RouteGuardService {
     if (this.authenticationService.isUserLoggedIn())
       return true ;
     this.authenticationService.logout();
-    this.router.navigate(['login']);
+    this.router.navigate(['/login']);
     return false ;
   }
 }

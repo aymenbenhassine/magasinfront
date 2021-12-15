@@ -27,6 +27,7 @@ export class AuthenticationService {
 
   logout() {
     //sessionStorage.removeItem('authenticatedUser')
+    
     sessionStorage.clear();
     localStorage.clear();
     this.globalVariables.role = null
@@ -37,6 +38,8 @@ export class AuthenticationService {
 
   isUserLoggedIn() {
     let user = localStorage.getItem('token')
-    return !(user === '')
+    if(!user || (user === '') )
+    return false
+    else return true ;
   }
 }
