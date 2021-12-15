@@ -1,6 +1,10 @@
 {
   "name": "gestion-magasin",
   "version": "0.0.0",
+  "description": "management app education",
+  "engines": {
+    "node": "14.17.6"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
