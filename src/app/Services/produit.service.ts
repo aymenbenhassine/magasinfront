@@ -15,7 +15,7 @@ export class ProduitService {
 
   listStock: Stock[];
 
-  private baseURL = 'http://localhost:8081';
+  private baseURL = 'https://gestionmagasin.herokuapp.com';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

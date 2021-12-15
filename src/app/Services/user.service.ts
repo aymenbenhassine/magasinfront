@@ -7,7 +7,7 @@ import { User } from '../Models/user';
   providedIn: 'root'
 })
 export class UserService {
-  private baseURL = "http://localhost:8081";
+  private baseURL = "https://gestionmagasin.herokuapp.com";
   constructor(private _http:HttpClient) { }
 
   getAllUsers():Observable<User[]> { 

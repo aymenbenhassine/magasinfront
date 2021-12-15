@@ -9,7 +9,7 @@ import { Produit } from '../Models/produit';
   providedIn: 'root'
 })
 export class FactureService {
-  private baseURL = "http://localhost:8081";
+  private baseURL = "https://gestionmagasin.herokuapp.com";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

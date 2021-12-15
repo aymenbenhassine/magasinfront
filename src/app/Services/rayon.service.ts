@@ -11,7 +11,7 @@ import { Rayon } from '../Models/rayon';
 
 export class RayonService {
   list: Rayon[];
-  private baseURL = "http://localhost:8081/rayon";
+  private baseURL = "https://gestionmagasin.herokuapp.com/rayon";
     httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ import { Fournisseur } from '../Models/fournisseur';
   providedIn: 'root'
 })
 export class FournisseurService {
-  private baseUrl = 'http://localhost:8081/';  
+  private baseUrl = 'https://gestionmagasin.herokuapp.com/';  
   constructor(private http:HttpClient) { }
   getFournisseurList(): Observable<any> {  
     return this.http.get(`${this.baseUrl}`+'getFournisseur');  

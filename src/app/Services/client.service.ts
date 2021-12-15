@@ -8,7 +8,7 @@ import { Client } from '../Models/client';
   providedIn: 'root'
 })
 export class ClientService {
-  private baseURL = "http://localhost:8081";
+  private baseURL = "https://gestionmagasin.herokuapp.com";
  
   constructor(private _http:HttpClient) { }
 

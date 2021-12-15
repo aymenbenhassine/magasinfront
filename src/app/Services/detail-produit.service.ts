@@ -9,7 +9,7 @@ import { DetailProduit } from '../Models/detail-produit';
 
 export class DetailProduitService {
   listDetailProduit :DetailProduit[];
-  private baseURL = 'http://localhost:8081/detailproduit';
+  private baseURL = 'https://gestionmagasin.herokuapp.com/detailproduit';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

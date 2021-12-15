@@ -8,7 +8,7 @@ import { DetailFournisseur } from '../Models/detail-fournisseur';
   providedIn: 'root'
 })
 export class DetailFournisseurService {
-  private baseUrl = 'http://localhost:8081/';  
+  private baseUrl = 'https://gestionmagasin.herokuapp.com';  
   constructor(private http:HttpClient) { }
   getAllDetailFournisseur(): Observable<DetailFournisseur[]>{
     
@@ -17,11 +17,11 @@ export class DetailFournisseurService {
   }
   
   createDetailFournisseur(DetailFournisseur: object): Observable<object> {  
-    return this.http.post(`${this.baseUrl}`+'addDetailFournisseur', DetailFournisseur);  
+    return this.http.post(`${this.baseUrl}`+'/addDetailFournisseur', DetailFournisseur);  
   }  
   
   deleteDetailFournisseur(id: number): Observable<any> {  
-    return this.http.delete(this.baseUrl+'remove-DetailFournisseur/'+id);  
+    return this.http.delete(this.baseUrl+'/remove-DetailFournisseur/'+id);  
   }  
   getDetailFournisseurById(id: number): Observable<DetailFournisseur> {
     const url=this.baseUrl+"/getDetailFournisseur"+'/'+id;
@@ -32,7 +32,7 @@ export class DetailFournisseurService {
     return this.http.put<DetailFournisseur>(this.baseUrl+"/modify-DetailFournisseur",four);
   }
   getDetailFournisseur(id: number): Observable<DetailFournisseur> {  
-    return this.http.get<DetailFournisseur>(this.baseUrl+'getDetailFournisseur/'+id);  
+    return this.http.get<DetailFournisseur>(this.baseUrl+'/getDetailFournisseur/'+id);  
   }  
 
  

@@ -8,7 +8,7 @@ import { Stock } from '../Models/stock';
 })
 export class StockService {
   list: Stock[];
-  private baseURL = "http://localhost:8081/stock";
+  private baseURL = "https://gestionmagasin.herokuapp.com/stock";
     httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
