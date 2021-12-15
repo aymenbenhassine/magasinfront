@@ -38,6 +38,7 @@ export class ListFournisseurComponent implements OnInit {
     });
   }
   updateFournisseur(id: number) {
+    console.log(id);
     this.router.navigate(['fournisseur/edit-Fournisseur',id]);
   }
 

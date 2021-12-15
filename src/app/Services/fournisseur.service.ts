@@ -24,13 +24,13 @@ export class FournisseurService {
   
  
   updateFournisseur(four:Fournisseur):Observable<Fournisseur>{
-    return this.http.put<Fournisseur>(this.baseUrl+"/modify-fournisseur",four);
+    return this.http.put<Fournisseur>(this.baseUrl+"modify-fournisseur",four);
   }
   getFournisseur(id: number): Observable<Fournisseur> {  
     return this.http.get<Fournisseur>(this.baseUrl+'getFournisseur/'+id);  
   }  
   getFournisseurById(id: number): Observable<Fournisseur> {
-    const url=this.baseUrl+"/retrieveDetailFournisseur"+'/'+id;
+    const url=this.baseUrl+"retrieveDetailFournisseur"+'/'+id;
     return this.http.get<Fournisseur>(url);
   }
 

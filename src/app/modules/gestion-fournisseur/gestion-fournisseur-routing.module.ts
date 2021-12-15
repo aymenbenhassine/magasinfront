@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:"view-Fournisseur", component:ListFournisseurComponent },
   { path: "view-Fournisseur", component: ListFournisseurComponent },  
   { path: "add-Fournisseur", component: AddFournisseurComponent }, 
-  { path: "edit-Fournisseur", component: EditFournisseurComponent },
+  { path: "edit-Fournisseur/:id", component: EditFournisseurComponent },
   { path: "view-Detail-Fournisseur", component: ListDetailFournisseurComponent },  
   { path: "add-Detail-Fournisseur", component: AddDetailFournisseurComponent }, 
   { path: "edit-Detail-Fournisseur", component: EditDetailFournisseurComponent }, 

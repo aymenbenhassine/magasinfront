@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +16,7 @@ import { GestionClientModule } from './modules/gestion-client/gestion-client.mod
 import { GestionUserModule } from './modules/gestion-user/gestion-user.module';
 import { LoginComponent } from './login/login.component';
 import { GestionFournisseurModule } from './modules/gestion-fournisseur/gestion-fournisseur.module';
+import { HttpInterceptorService } from './Services/http-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { GestionFournisseurModule } from './modules/gestion-fournisseur/gestion-
     FormsModule,
     GestionFournisseurModule
   ],
-  providers: [],
+  providers: [{provide : HTTP_INTERCEPTORS , useClass : HttpInterceptorService ,multi : true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -31,7 +31,7 @@ export class AuthenticationService {
     localStorage.clear();
     this.globalVariables.role = null
     this.globalVariables.username = null
-    this.globalVariables.token = ''
+    this.globalVariables.token = null;
      console.log(this.isUserLoggedIn())
   }
 

@@ -16,21 +16,22 @@ export class EditFournisseurComponent implements OnInit {
   
   fournisseur:Fournisseur ; 
   paramater : number ;
-  constructor(private ps :FournisseurService,private router :Router, private ac : ActivatedRoute,public activeModal: NgbActiveModal) { }
+  constructor(private ps :FournisseurService,private router :Router, private ac : ActivatedRoute) { }
 
   ngOnInit(): void {
+    
    this.ac.params.subscribe(params=>
     {
       this.paramater=params['id'];
     })
-   
+    console.log("edit"+this.paramater)
     this.getFournisseurById();
 
   }
 
 
   getFournisseurById()
-  {this.ps.getFournisseurById(this.paramater).subscribe(
+  {this.ps.getFournisseur(this.paramater).subscribe(
     (res) => {
       console.log(res);
       this.fournisseur = res;
