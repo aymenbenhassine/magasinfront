@@ -21,7 +21,7 @@ export class AuthenticationService {
     
     
   authenticate(cd : ConnectionDetails) : Observable<LoginDetails>{
-    return this.http.post<LoginDetails>("http://localhost:8081/SpringMVC/servlet/auth/signin",cd);
+    return this.http.post<LoginDetails>("http://localhost:8081/auth/signin",cd);
   }
 
 

@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', this.globalVariables.token);
         //sessionStorage.setItem('username',this.username);
         this.invalidLogin= false;
-        this.router.navigate(['/listuser']);
+        this.router.navigate(['user/listuser']);
       },error=>{
         this.invalidLogin=true;  
         console.log(error);

@@ -7,25 +7,25 @@ import { User } from '../Models/user';
   providedIn: 'root'
 })
 export class UserService {
-
+  private baseURL = "http://localhost:8081";
   constructor(private _http:HttpClient) { }
 
   getAllUsers():Observable<User[]> { 
-    return this._http.get<User[]>("http://localhost:8081/SpringMVC/servlet/getAllUsers");
+    return this._http.get<User[]>(this.baseURL+"/getAllUsers");
     }
   
   deleteUser (user: User): Observable<User> {
-    return this._http.delete<User>("http://localhost:8081/SpringMVC/servlet/deleteUser"+'/'+ user.id);
+    return this._http.delete<User>(this.baseURL+"/deleteUser"+'/'+ user.id);
     }  
   
   addUser (user: User): Observable<User> {
-    return this._http.post<User>("http://localhost:8081/SpringMVC/servlet/addUser",user);
+    return this._http.post<User>(this.baseURL+"/addUser",user);
     }  
   
   updateUser(user: User): Observable<User>{
-      return this._http.put<User>("http://localhost:8081/SpringMVC/servlet/updateUser",user);
+      return this._http.put<User>(this.baseURL+"/updateUser",user);
     }  
   
   getUserById(idUser: number): Observable<User> {
-    return this._http.get<User>("http://localhost:8081/SpringMVC/servlet/getUser" +'/'+ idUser); }
+    return this._http.get<User>(this.baseURL+"/getUser" +'/'+ idUser); }
 }

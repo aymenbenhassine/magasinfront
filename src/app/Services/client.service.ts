@@ -8,27 +8,27 @@ import { Client } from '../Models/client';
   providedIn: 'root'
 })
 export class ClientService {
-
+  private baseURL = "http://localhost:8081";
  
   constructor(private _http:HttpClient) { }
 
 getAllClients():Observable<Client[]> { 
-  return this._http.get<Client[]>("http://localhost:8081/SpringMVC/servlet/getAllClients");
+  return this._http.get<Client[]>(this.baseURL+"/getAllClients");
   }
 
 deleteClient (client: Client): Observable<Client> {
-  return this._http.delete<Client>("http://localhost:8081/SpringMVC/servlet/deleteClient"+'/'+ client.idClient);
+  return this._http.delete<Client>(this.baseURL+"/deleteClient"+'/'+ client.idClient);
   }  
 
 addClient (client: Client): Observable<Client> {
-  return this._http.post<Client>("http://localhost:8081/SpringMVC/servlet/addClient",client);
+  return this._http.post<Client>(this.baseURL+"/addClient",client);
   }  
 
 updateClient(client: Client): Observable<Client>{
-    return this._http.put<Client>("http://localhost:8081/SpringMVC/servlet/updateClient",client);
+    return this._http.put<Client>(this.baseURL+"/updateClient",client);
   }  
 
 getClientById(idClient: number): Observable<Client> {
-  return this._http.get<Client>("http://localhost:8081/SpringMVC/servlet/getClient" +'/'+ idClient); }
+  return this._http.get<Client>(this.baseURL+"/getClient" +'/'+ idClient); }
   
 }

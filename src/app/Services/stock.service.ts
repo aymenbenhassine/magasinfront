@@ -8,8 +8,8 @@ import { Stock } from '../Models/stock';
 })
 export class StockService {
   list: Stock[];
-  private baseURL = "http://localhost:8081/SpringMVC/servlet/stock";
-  httpOptions = {
+  private baseURL = "http://localhost:8081/stock";
+    httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })

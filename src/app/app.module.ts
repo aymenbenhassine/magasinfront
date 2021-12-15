@@ -15,12 +15,13 @@ import { StockModule } from './modules/GestionStocks/stock.module';
 import { GestionClientModule } from './modules/gestion-client/gestion-client.module';
 import { GestionUserModule } from './modules/gestion-user/gestion-user.module';
 import { LoginComponent } from './login/login.component';
+import { GestionFournisseurModule } from './modules/gestion-fournisseur/gestion-fournisseur.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,8 @@ import { LoginComponent } from './login/login.component';
     GestionClientModule,
     GestionUserModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    GestionFournisseurModule
   ],
   providers: [],
   bootstrap: [AppComponent]

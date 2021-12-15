@@ -126,6 +126,23 @@
                 </ul>
               </div>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-fournisseur" data-toggle="collapse" role="button"
+                aria-expanded="false" aria-controls="navbar-stock">
+                <i class="ni ni-shop text-primary"></i>
+                <span class="nav-link-text">Gestion  Fournisseur</span>
+              </a>
+              <div class="collapse" id="navbar-fournisseur">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a [routerLink]="['fournisseur/view-Fournisseur']" class="nav-link">Afficher fournisseurs</a>
+                  </li>
+                </ul>
+              </div>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link-text"><BUtton class="btn btn-sm btn-danger" (click)="logout()">LOGOUT</BUtton></a>
+          </li>          
           </ul>
         </div>
       </div>
